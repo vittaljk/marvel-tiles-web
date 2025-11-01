@@ -1,6 +1,8 @@
 
 import styles from "./Header.module.scss";
 import * as Molecules from "@/components/Molecules";
+import { siteConfig } from "@/config/site";
+import Link from "next/link";
 
 function Header() {
 
@@ -29,9 +31,15 @@ function Header() {
             {/* Nav + Phone */}
             <div className="hidden md:flex items-center space-x-8">
               <nav className="flex items-center space-x-6">
-                <a href="#about" className="text-accentBeige hover:text-accentGold transition-colors">About</a>
-                <a href="#products" className="text-accentBeige hover:text-accentGold transition-colors">Products</a>
-                <a href="#contact" className="text-accentBeige hover:text-accentGold transition-colors">Contact Us</a>
+                {siteConfig.navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-accentBeige hover:text-accentGold transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
               </nav>
 
               <a href="tel:+919876543210" className="inline-flex items-center px-4 py-2 bg-accentBeige text-primary rounded-full font-semibold shadow-sm hover:shadow-md transition-shadow">
