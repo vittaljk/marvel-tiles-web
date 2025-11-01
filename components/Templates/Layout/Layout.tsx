@@ -6,7 +6,6 @@ import { Head } from "../head";
 import styles from "./Layout.module.scss";
 
 import * as Organisms from "@/components/Organisms";
-import * as Molecules from "@/components/Molecules";
 
 interface LayoutProps {
   children: ReactNode;
@@ -22,7 +21,6 @@ function Layout(props: LayoutProps) {
     >
       <Head pageTitle={pageTitle} />
       <Organisms.Header />
-      <Molecules.Navbar />
       <div>
         <div>{children}</div>
         <Organisms.Footer />

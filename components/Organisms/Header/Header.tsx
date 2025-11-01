@@ -21,7 +21,7 @@ function Header() {
             </div>
 
             <div className="flex-1 flex justify-center md:justify-start">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 z-10">
                 <Molecules.Logo />
               </div>
             </div>

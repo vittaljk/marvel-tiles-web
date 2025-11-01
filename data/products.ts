@@ -22,6 +22,7 @@ export interface Thickness {
 
 export interface Product {
     id: string;
+    link: string;
     name: string;
     category: ProductCategory;
     size: ProductSize;
@@ -47,6 +48,7 @@ export const categories: ProductCategory[] = [
 export const products: Product[] = [
     {
         id: "mt-f01",
+        link: "/products/flooring-tiles/marbella-white-gloss",
         name: "Marbella White Gloss",
         category: "flooring-tiles",
         size: "2x4",
@@ -62,6 +64,7 @@ export const products: Product[] = [
     },
     {
         id: "mt-b01",
+        link: "/products/bathroom-tiles/slate-grey-matte",
         name: "Slate Grey Matte",
         category: "bathroom-tiles",
         size: "2x4",
@@ -76,6 +79,7 @@ export const products: Product[] = [
     },
     {
         id: "mt-k01",
+        link: "/products/kitchen-tiles/travertine-beige",
         name: "Travertine Beige",
         category: "kitchen-tiles",
         size: "6x4",

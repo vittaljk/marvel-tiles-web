@@ -9,14 +9,14 @@ export default function ProductsIndex() {
         Explore Our Collections
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        {categories.map((categories) => (
+        {categories.map((category) => (
           <Link
-            key={categories}
-            href={`/products/${categories}`}
+            key={category}
+            href={`/products/${category}`}
             className="p-6 border rounded-lg shadow-sm hover:shadow-md hover:border-yellow-600 transition"
           >
             <h2 className="text-lg capitalize text-gray-700">
-              {categories.replace(/-/g, " ")}
+              {category.replace(/-/g, " ")}
             </h2>
           </Link>
         ))}

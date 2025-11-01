@@ -6,8 +6,9 @@ import * as Atoms from "@/components/Atoms";
 export default function IndexPage() {
   return (
     <Templates.Layout>
-      {/* <Atoms.HeroBanner />
-      <Molecules.ProductCarousel /> */}
+      {/* <Atoms.HeroBanner /> */}
+      <Molecules.Navbar />
+      {/* <Molecules.ProductCarousel /> */}
       <>Hello</>
     </Templates.Layout>
   );
