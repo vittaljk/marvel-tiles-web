@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "x'ibit",
-  description: "Where Design Meets Impeccable Execution",
+  name: "Marvel Tiles Bangalore",
+  description: "Marvel Tiles is Bengaluru's premier supplier of high-quality Flooring, Parking, Bathroom, Kitchen, and Elevation tiles for all projects. Specializing in Vitrified tiles: GVT and PGVT, including advanced Full Body and Colour Body solutions. We stock Pure Vitrified GVT, Smart Marbles, and Large Format Slabs up to 1200x2400mm, along with Nano White Marble and Quartz. Located on Bannerghatta Road in Laxmipura. We serve Bengaluru, including Jigani, Sakalavara, and Gottigere. Our expert team offers personalized guidance to homeowners, architects, and builders. ⭐ Visit Marvel Tiles today for exclusive stone and tile solutions",
   navItems: [
     {
       label: "Home",
