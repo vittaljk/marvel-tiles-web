@@ -28,4 +28,7 @@ export const siteConfig = {
     discord: "https://discord.gg/9b6yyZKmH4",
     sponsor: "https://patreon.com/jrgarciadev",
   },
+  phone: "+91 08884222269",
+  email: "marveltiles2024@gmail.com",
+  address: "95/4, Bannerghatta Rd, opposite to Euro School, Laxmipura, Bengaluru, Karnataka 560083, India",
 };

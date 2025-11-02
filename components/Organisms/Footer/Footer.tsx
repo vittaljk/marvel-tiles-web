@@ -2,6 +2,7 @@ import { siteConfig } from "@/config/site";
 import Link from "next/link";
 import * as Atoms from "@/components/Atoms";
 import { categories } from "@/data/products";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 function Footer() {
   return (
@@ -63,13 +64,28 @@ function Footer() {
         <div>
           <h4 className="text-accentGold font-semibold mb-4">Contact Info</h4>
           <ul className="space-y-3 text-sm">
-            <li>📞&nbsp;&nbsp;088842 22269</li>
-            <li><a href="mailto:marveltiles2024@gmail.com">📧&nbsp;&nbsp;marveltiles2024@gmail.com</a></li>
-            <li>
-              📍&nbsp;95/4, Bannerghatta Rd, opposite to Euro School, Laxmipura,
-              Bengaluru, Karnataka 560083, India
+            <li className="flex items-start gap-3">
+              <Phone className="w-5 h-5 text-accentGold mt-1 flex-shrink-0" />
+              <a href={`tel:${siteConfig.phone.replace(/\s+/g, '')}`} className="hover:text-accentGold">{siteConfig.phone}</a>
             </li>
-            <li>🕒&nbsp;&nbsp;Mon to Sat: 08:30 am to 08:30 pm</li>
+
+            <li className="flex items-start gap-3">
+              <Mail className="w-5 h-5 text-accentGold mt-1 flex-shrink-0" />
+              <a href={`mailto:marveltiles2024@gmail.com`} className="hover:text-accentGold">marveltiles2024@gmail.com</a>
+            </li>
+
+            <li className="flex items-start gap-3">
+              <MapPin className="w-5 h-5 text-accentGold mt-1 flex-shrink-0" />
+              <span>
+                95/4, Bannerghatta Rd, opposite to Euro School, Laxmipura,
+                Bengaluru, Karnataka 560083, India
+              </span>
+            </li>
+
+            <li className="flex items-start gap-3">
+              <Clock className="w-5 h-5 text-accentGold mt-1 flex-shrink-0" />
+              <span>Mon to Sat: 08:30 am to 08:30 pm</span>
+            </li>
           </ul>
         </div>
       </div>
