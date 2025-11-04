@@ -1,28 +1,43 @@
 
+import { useState } from "react";
 import styles from "./Header.module.scss";
 import * as Molecules from "@/components/Molecules";
+import * as Atoms from "@/components/Atoms";
 import { siteConfig } from "@/config/site";
 import Link from "next/link";
+import { Drawer, DrawerContent, DrawerHeader, DrawerBody, Button } from "@heroui/react";
+import { Menu, X } from "lucide-react";
+
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className={styles.headerWrapper}>
       <div className={styles.headerContainer}>
-        <header className="bg-primary text-white py-4 shadow-md h-full">
-          <div className="relative container mx-auto flex items-center justify-between px-4 md:px-6 h-full">
-            <div className="md:hidden">
-              <button
+        <header className="bg-primary text-white md:py-4 shadow-md h-full">
+          <div className="relative md:container mx-auto md:flex items-center justify-between px-4 md:px-6 h-full">
+            <div className="md:hidden flex items-center justify-between h-full">
+              <Button
+                isIconOnly
+                onPress={() => setIsOpen(true)}
                 aria-label="Open menu"
-                className="p-2 rounded-md hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30"
+                variant="light"
+                className="text-white hover:bg-white/10"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-              </button>
+                <Menu size={26} />
+              </Button>
+              <div className="w-10">
+                <Atoms.Image
+                  path="/images/logo-mobile.png"
+                  alt="Marvel Tiles Logo"
+                  lazy={false}
+                />
+              </div>
             </div>
 
-            <div className="flex-1 flex justify-center md:justify-start">
+
+            <div className="hidden md:flex flex-1 justify-center md:justify-start">
               <div className="flex items-center space-x-2 z-10">
                 <Molecules.Logo />
               </div>
@@ -50,6 +65,27 @@ function Header() {
           </div>
         </header>
       </div>
+      <Drawer isOpen={isOpen} onOpenChange={setIsOpen} placement="left" closeButton={<X size={50} className="text-accentGold cursor-pointer" />} >
+        <DrawerContent className="bg-primary text-accentBeige">
+          <DrawerHeader className="flex items-center justify-between border-b border-accentGold/20 px-5 py-4">
+            <Molecules.Logo />
+          </DrawerHeader>
+
+          <DrawerBody className="flex flex-col space-y-6 px-6 py-6">
+            {siteConfig.navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className="text-lg font-medium text-accentBeige hover:text-accentGold transition-colors"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
+
     </div>
   );
 }

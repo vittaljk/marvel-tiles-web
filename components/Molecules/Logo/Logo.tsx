@@ -6,7 +6,7 @@ function Logo() {
   return (
     <Link href="/">
       <div className={styles.logoContainer}>
-        <img alt="Logo" src="/images/Marvel-Tiles-Logo-3 (1).webp" />
+        <img alt="Logo" src="/images/logo.webp" />
       </div>
     </Link>
   );
