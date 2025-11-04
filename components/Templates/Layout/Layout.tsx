@@ -22,7 +22,7 @@ function Layout(props: LayoutProps) {
       <Head pageTitle={pageTitle} />
       <Organisms.Header />
       <div>
-        <div>{children}</div>
+        <div className={styles.contentContainer}>{children}</div>
         <Organisms.Footer />
       </div>
     </div>

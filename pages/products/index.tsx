@@ -1,26 +1,13 @@
 // pages/products/index.tsx
-import Link from "next/link";
-import { categories } from "@/data/products";
+import * as Templates from "@/components/Templates";
+import * as Molecules from "@/components/Molecules";
 
 export default function ProductsIndex() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12">
-      <h1 className="text-3xl font-semibold mb-8 text-gray-800">
-        Explore Our Collections
-      </h1>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        {categories.map((category) => (
-          <Link
-            key={category}
-            href={`/products/${category}`}
-            className="p-6 border rounded-lg shadow-sm hover:shadow-md hover:border-yellow-600 transition"
-          >
-            <h2 className="text-lg capitalize text-gray-700">
-              {category.replace(/-/g, " ")}
-            </h2>
-          </Link>
-        ))}
+     <Templates.Layout>
+      <div className="max-w-6xl mx-auto px-6 py-12">
+        <Molecules.ProductCarousel />
       </div>
-    </div>
+     </Templates.Layout>
   );
 }

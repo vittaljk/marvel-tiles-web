@@ -14,10 +14,12 @@ export type ProductCategory =
 export type ProductSize = "2x4" | "6x4" | "3x3" | "4x4";
 
 // New: typesafe thickness representation
-export type ThicknessUnit = "mm" | "cm" | "in";
+// Only millimeter thicknesses allowed per new requirement
+export type ThicknessUnit = "mm";
+export type AllowedThicknessValue = 9 | 12 | 15 | 20;
 export interface Thickness {
-    value: number; // numeric value, e.g., 400
-    unit: ThicknessUnit; // e.g., 'mm'
+    value: AllowedThicknessValue; // restricted allowed values in mm
+    unit: ThicknessUnit; // 'mm'
 }
 
 export interface Product {
@@ -33,16 +35,16 @@ export interface Product {
 }
 
 export const categories: ProductCategory[] = [
-  "flooring-tiles",
-  "parking-tiles",
-  "bathroom-tiles",
-  "kitchen-tiles",
-  "elevation-tiles",
-  "full-body-tiles",
-  "colour-body-tiles",
-  "vetrified-tiles",
-  "gvt-and-pgvt-tiles",
-  "all"
+    "flooring-tiles",
+    "parking-tiles",
+    "bathroom-tiles",
+    "kitchen-tiles",
+    "elevation-tiles",
+    "full-body-tiles",
+    "colour-body-tiles",
+    "vetrified-tiles",
+    "gvt-and-pgvt-tiles",
+    "all"
 ];
 
 export const products: Product[] = [
@@ -52,7 +54,7 @@ export const products: Product[] = [
         name: "Marbella White Gloss",
         category: "flooring-tiles",
         size: "2x4",
-        thickness: { value: 400, unit: "mm" },
+        thickness: { value: 15, unit: "mm" },
         thumbnail:
             "https://placehold.co/600x400",
         images: [
@@ -68,7 +70,7 @@ export const products: Product[] = [
         name: "Slate Grey Matte",
         category: "bathroom-tiles",
         size: "2x4",
-        thickness: { value: 400, unit: "mm" },
+        thickness: { value: 12, unit: "mm" },
         thumbnail:
             "https://placehold.co/600x400",
         images: [
@@ -83,7 +85,7 @@ export const products: Product[] = [
         name: "Travertine Beige",
         category: "kitchen-tiles",
         size: "6x4",
-        thickness: { value: 400, unit: "mm" },
+        thickness: { value: 9, unit: "mm" },
         thumbnail:
             "https://placehold.co/600x400",
         images: [

@@ -1,7 +1,10 @@
 .layoutContainer {
-    @apply h-full grid grid-rows-[56px_1fr] md:grid-rows-[96px_1fr];
+    @apply h-full grid grid-rows-[56px_1fr] md:grid-rows-[64px_1fr];
 }
 
+.contentContainer {
+    min-height: calc(100vh - 570px);
+}
 
 .item {
     width: 200px;
