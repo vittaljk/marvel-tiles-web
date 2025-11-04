@@ -6,7 +6,7 @@ export default function ProductsIndex() {
   return (
      <Templates.Layout>
       <div className="max-w-6xl mx-auto px-6 py-12" data-aos="fade-up">
-        <Molecules.ProductCarousel />
+        <Molecules.ProductCategoryCarousel />
       </div>
      </Templates.Layout>
   );

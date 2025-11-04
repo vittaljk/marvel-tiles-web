@@ -48,12 +48,10 @@ function Footer() {
           <h4 className="text-accentGold font-semibold mb-4">Products</h4>
           <ul className="space-y-2">
             {categories.map((cat) => {
-              const formatted = cat
-                .replace(/-/g, " ")
-                .replace(/\b\w/g, (c) => c.toUpperCase());
-              const href = cat === "all" ? "/products" : `/products/${cat}`;
+              const formatted = cat.name;
+              const href = cat.id === "all" ? "/products" : `/products/${cat.id}`;
               return (
-                <li key={cat}>
+                <li key={cat.id}>
                   <Link
                     href={href}
                     className="inline-block rounded-md duration-200 hover:text-accentGold transition-colors"

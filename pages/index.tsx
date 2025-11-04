@@ -14,16 +14,16 @@ export default function IndexPage() {
       </div>
 
       <div data-aos="fade-up">
-        <Molecules.ProductCarousel />
+        <Molecules.ProductCategoryCarousel />
       </div>
 
       <Molecules.AboutUsSection />
     
       <Molecules.ContactSection />
 
-      <div data-aos="fade-up">
+      {/* <div data-aos="fade-up">
         <Molecules.ExploreOurRanges />
-      </div>
+      </div> */}
     </Templates.Layout>
   );
 }

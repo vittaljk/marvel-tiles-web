@@ -4,7 +4,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 import { Product, products } from "@/data/products";
-import * as Atoms from "@/components/Atoms";
+import * as constants from "@/constants";
 
 interface ProductCarouselProps {
     products: Product[];
@@ -35,7 +35,7 @@ function ProductCarousel({ products }: ProductCarouselProps) {
         <div className="relative py-10 bg-white">
             <div className="max-w-7xl mx-auto">
                 <Carousel
-                    responsive={responsive}
+                    responsive={constants.CarouselResponsive}
                     infinite
                     autoPlay
                     autoPlaySpeed={3000}
@@ -48,7 +48,7 @@ function ProductCarousel({ products }: ProductCarouselProps) {
                     {products.map((product, idx) => (
                         <Link
                             key={idx}
-                            href={`/category/${encodeURIComponent(product.category)}`}
+                            href={`/products/${encodeURIComponent(product.category)}`}
                         >
                             <div className="group relative overflow-hidden transition-all duration-500">
                                 <img

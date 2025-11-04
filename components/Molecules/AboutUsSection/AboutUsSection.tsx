@@ -1,6 +1,6 @@
 function AboutUsSection() {
     return (
-        <div className="mb-16">
+        <>
             <section  data-aos="fade-up" className="bg-accentCream py-16 px-6 md:px-16 text-center">
                 <h1 className="text-4xl font-bold text-primary mb-4 tracking-wide">
                     About Marvel Tiles
@@ -46,7 +46,7 @@ function AboutUsSection() {
                     Visit our showroom or contact us to explore our wide collection of elegant and durable tiles.
                 </p>
             </section>
-        </div>
+        </>
     )
 }
 

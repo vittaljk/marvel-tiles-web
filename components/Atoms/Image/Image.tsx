@@ -28,7 +28,7 @@ function Image(props: IImageProps) {
   //   const optimizedSrc = path.replace("/upload/", `/upload/${transformations}/`);
 
   return (
-    <div>
+    <div className="w-full h-full">
       <img
         // src={optimizedSrc}
         alt={alt}

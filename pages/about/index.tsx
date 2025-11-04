@@ -8,7 +8,9 @@ export default function About() {
        {/* TODO: without video */}
       {/* <Atoms.HeroBanner /> */}
       <Molecules.Navbar />
-      <Molecules.AboutUsSection />
+       <div className="mb-16">
+        <Molecules.AboutUsSection />
+       </div>
     </Templates.Layout>
   );
 }
