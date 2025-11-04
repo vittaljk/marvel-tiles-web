@@ -16,14 +16,14 @@ export default function CategoryPage() {
     return (
         <Templates.Layout>
             <div className="max-w-7xl mx-auto px-6 py-12">
-                <h1 className="text-3xl font-semibold mb-8 capitalize text-gray-800">
+                <h1 className="text-3xl font-semibold mb-8 capitalize text-gray-800" data-aos="fade-up">
                     {category.toString().replace(/-/g, " ")}
                 </h1>
 
                 {filtered.length === 0 ? (
                     <p className="text-gray-500">No products found in this category.</p>
                 ) : (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" data-aos="fade-up">
                         {filtered.map((p) => (
                             <Link href={`/product/${p.id}`} key={p.id}>
                                 <div className="group">

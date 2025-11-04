@@ -5,12 +5,25 @@ import * as Atoms from "@/components/Atoms";
 export default function IndexPage() {
   return (
     <Templates.Layout>
-      <Atoms.HeroBanner />
-      <Molecules.Navbar />
-      <Molecules.ProductCarousel />
+      <div data-aos="fade-down">
+        <Atoms.HeroBanner />
+      </div>
+
+      <div data-aos="fade-up">
+        <Molecules.Navbar />
+      </div>
+
+      <div data-aos="fade-up">
+        <Molecules.ProductCarousel />
+      </div>
+
       <Molecules.AboutUsSection />
+    
       <Molecules.ContactSection />
-      <Molecules.ExploreOurRanges />
+
+      <div data-aos="fade-up">
+        <Molecules.ExploreOurRanges />
+      </div>
     </Templates.Layout>
   );
 }

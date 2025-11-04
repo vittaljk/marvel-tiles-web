@@ -1,7 +1,7 @@
 function AboutUsSection() {
     return (
-        <div>
-            <section className="bg-accentCream py-16 px-6 md:px-16 text-center">
+        <div className="mb-16">
+            <section  data-aos="fade-up" className="bg-accentCream py-16 px-6 md:px-16 text-center">
                 <h1 className="text-4xl font-bold text-primary mb-4 tracking-wide">
                     About Marvel Tiles
                 </h1>
@@ -11,7 +11,7 @@ function AboutUsSection() {
             </section>
 
             {/* Main content section */}
-            <section className="py-16 px-6 md:px-20 bg-white text-left">
+            <section data-aos="fade-right" className="py-16 px-6 md:px-20 bg-white text-left">
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-3xl font-semibold text-primary mb-6 border-b-4 border-accentGold inline-block pb-2">
                         Our Story
@@ -40,7 +40,7 @@ function AboutUsSection() {
             </section>
 
             {/* Optional: Add a small highlight or CTA */}
-            <section className="bg-primary text-textLight text-center py-10 px-6">
+            <section data-aos="fade-left" className="bg-primary text-textLight text-center py-10 px-6">
                 <h3 className="text-2xl font-semibold mb-3">Transform your spaces with Marvel Tiles</h3>
                 <p className="max-w-2xl mx-auto text-accentBeige">
                     Visit our showroom or contact us to explore our wide collection of elegant and durable tiles.

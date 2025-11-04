@@ -7,8 +7,13 @@ export default function Contact() {
     <Templates.Layout>
       {/* TODO: without video */}
       {/* <Atoms.HeroBanner /> */}
-      <Molecules.Navbar />
-      <Molecules.ContactSection />
+      <div data-aos="fade-up">
+        <Molecules.Navbar />
+      </div>
+
+      <div data-aos="fade-left">
+        <Molecules.ContactSection />
+      </div>
     </Templates.Layout>
   );
 }

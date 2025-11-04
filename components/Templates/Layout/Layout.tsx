@@ -23,7 +23,7 @@ function Layout(props: LayoutProps) {
       <Organisms.Header />
       <div>
         <div className={styles.contentContainer}>{children}</div>
-        <Organisms.Footer />
+        <div data-aos="fade-up"><Organisms.Footer /></div>
       </div>
     </div>
   );
