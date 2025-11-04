@@ -28,11 +28,13 @@ function Header() {
                 <Menu size={26} />
               </Button>
               <div className="w-10">
-                <Atoms.Image
-                  path="/images/logo-mobile.png"
-                  alt="Marvel Tiles Logo"
-                  lazy={false}
-                />
+                <Link href="/">
+                  <Atoms.Image
+                    path="/images/logo-mobile.png"
+                    alt="Marvel Tiles Logo"
+                    lazy={false}
+                  />
+                </Link>
               </div>
             </div>
 

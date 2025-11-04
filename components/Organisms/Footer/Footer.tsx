@@ -51,29 +51,7 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Column 3 — Products */}
-        <div>
-          <h4 className="text-accentGold font-semibold mb-4 uppercase tracking-wide">
-            Products
-          </h4>
-          <ul className="space-y-2">
-            {categories.map((cat) => {
-              const href = cat.id === "all" ? "/products" : `/products/${cat.id}`;
-              return (
-                <li key={cat.id}>
-                  <Link
-                    href={href}
-                    className="inline-block rounded-md duration-200 hover:text-accentGold transition-colors"
-                  >
-                    {cat.name}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-
-        {/* Column 4 — Contact Info & Social */}
+        {/* Column 3 — Contact Info & Social */}
         <div className="flex flex-col items-start">
           <h4 className="text-accentGold font-semibold mb-4 uppercase tracking-wide">
             Contact Info
@@ -159,6 +137,28 @@ function Footer() {
               </a>
             </div>
           </div>
+        </div>
+
+         {/* Column 4 — Products */}
+        <div>
+          <h4 className="text-accentGold font-semibold mb-4 uppercase tracking-wide">
+            Products
+          </h4>
+          <ul className="space-y-2">
+            {categories.map((cat) => {
+              const href = cat.id === "all" ? "/products" : `/products/${cat.id}`;
+              return (
+                <li key={cat.id}>
+                  <Link
+                    href={href}
+                    className="inline-block rounded-md duration-200 hover:text-accentGold transition-colors"
+                  >
+                    {cat.name}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
 

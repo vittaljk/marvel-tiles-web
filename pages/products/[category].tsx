@@ -57,7 +57,7 @@ export default function CategoryPage() {
                     </p>
                 ) : (
                     <div
-                        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
+                        className="grid grid-cols-1 md:grid-cols-3 gap-10"
                         data-aos="fade-up"
                         data-aos-delay="150"
                     >
