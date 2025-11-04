@@ -34,7 +34,7 @@ export default function CategoryPage() {
 
                     {/* Text content */}
                     <div
-                        className="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-16 text-left"
+                        className="absolute inset-0 flex flex-col md:justify-center pt-4 md:pt-0 items-start px-6 md:px-16 text-left"
                         data-aos="fade-right"
                         data-aos-delay="200"
                     >
