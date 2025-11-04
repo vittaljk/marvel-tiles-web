@@ -3,8 +3,8 @@ import { siteConfig } from "@/config/site";
 
 function ContactSection() {
     return (
-        <section className="bg-gray-50 py-16">
-            <div className="container mx-auto px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <section className="bg-gray-50 py-12 md:py-16">
+            <div className="md:container mx-auto px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
 
                 {/* Left Column - Contact Info */}
                 <div data-aos="fade-right" className="space-y-6">
