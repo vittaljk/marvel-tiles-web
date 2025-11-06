@@ -98,7 +98,7 @@ function Footer() {
             </h4>
             <div className="flex md:justify-start space-x-5">
               <a
-                href="https://www.instagram.com/marvel_tiles/"
+                href={siteConfig.socialMedialinks.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-accentGold transition-colors"
@@ -108,7 +108,7 @@ function Footer() {
               </a>
 
               <a
-                href="https://maps.app.goo.gl/vzpib6Ph24QAVNFc8"
+                href={siteConfig.socialMedialinks.google}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-accentGold transition-colors"

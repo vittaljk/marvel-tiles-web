@@ -17,16 +17,21 @@ export const siteConfig = {
       href: "/products",
     },
     {
+      label: "Gallery",
+      href: "/gallery",
+    },
+    {
       label: "About",
       href: "/about",
     },
   ],
+  keywords:
+    "tiles, vitrified tiles, GVT tiles, marble showroom, Bangalore tiles",
+  image: "https://res.cloudinary.com/duy0961om/image/upload/v1762456231/logo_kx8msk.webp",
+  url: "https://marveltiles.com",
   socialMedialinks: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui.org",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    instagram: "https://www.instagram.com/marvel_tiles/",
+    google: "https://maps.app.goo.gl/vzpib6Ph24QAVNFc8",
   },
   phone: "+91 08884222269",
   email: "marveltiles2024@gmail.com",
