@@ -5,5 +5,6 @@ import ContactSection from "./ContactSection";
 import AboutUsSection from "./AboutUsSection";
 import ExploreOurRanges from "./ExploreOurRanges";
 import ProductCategoryCarousel from "./ProductCategoryCarousel";
+import CategoryView from "./CategoryView";
 
-export { ProductCarousel, ProductCategoryCarousel, Logo, Navbar, ContactSection, AboutUsSection, ExploreOurRanges };
+export { ProductCarousel, ProductCategoryCarousel, Logo, Navbar, ContactSection, AboutUsSection, ExploreOurRanges, CategoryView };
