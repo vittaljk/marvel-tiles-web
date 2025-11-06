@@ -16,7 +16,9 @@ export default function IndexPage() {
       <div data-aos="fade-up">
         <Molecules.ProductCategoryCarousel />
       </div>
-
+      <div className="mb-8 max-w-7xl mx-auto px-4" data-aos="fade-up">
+        <Atoms.ProductInfoCard />
+      </div>
       <Molecules.AboutUsSection />
     
       <Molecules.ContactSection />

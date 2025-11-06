@@ -85,11 +85,11 @@ export const categories: ProductCategory[] = [
         name: "GVT and PGVT Tiles",
         thumbnail: "https://res.cloudinary.com/duy0961om/image/upload/v1762282728/bed3ffec-3d58-4e9e-afd7-a3f484e8b3e2.png",
     },
-    {
-        id: "all",
-        name: "All Products",
-        thumbnail: "https://res.cloudinary.com/duy0961om/image/upload/v1762282401/a6b81e1a-1bab-4373-a7db-94bacfc819ca.png",
-    },
+    // {
+    //     id: "all",
+    //     name: "All Products",
+    //     thumbnail: "https://res.cloudinary.com/duy0961om/image/upload/v1762282401/a6b81e1a-1bab-4373-a7db-94bacfc819ca.png",
+    // },
 ];
 
 
