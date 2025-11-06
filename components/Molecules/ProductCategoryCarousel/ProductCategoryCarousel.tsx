@@ -18,6 +18,7 @@ function ProductCategoryCarousel() {
                     <Carousel
                         responsive={constants.CarouselResponsive}
                         infinite
+                        autoPlay
                         autoPlaySpeed={3000}
                         keyBoardControl
                         transitionDuration={700}
