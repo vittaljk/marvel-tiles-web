@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { products, categories } from "@/data/products";
+import { products, categories, productSizes, productThicknesses, thicknessUnit } from "@/data/products";
 import * as Atoms from "@/components/Atoms";
 import * as Templates from "@/components/Templates";
 
@@ -53,10 +53,12 @@ export default function CategoryPage() {
 
             {/* Product Grid */}
             <section className="max-w-7xl mx-auto px-6 py-16">
-                <div className="mb-8 max-w-7xl mx-auto px-4">
+                <div className="mb-8">
+                    <Atoms.ProductNoteCard  />
+                </div>
+                <div className="mb-8">
                     <Atoms.ProductInfoCard  />
                 </div>
-
                 {filtered.length === 0 ? (
                     <p className="text-gray-500 text-center" data-aos="fade-up">
                         No products found in this category.
@@ -86,18 +88,6 @@ export default function CategoryPage() {
                                     <h3 className="text-lg font-semibold text-gray-800 group-hover:text-accentGold transition-colors duration-300">
                                         {p.name}
                                     </h3>
-                                    <div className="text-sm text-gray-600 mt-1">
-                                        <span className="mr-3">
-                                            Size: <span className="font-medium">{p.size}</span>
-                                        </span>
-                                        <span>
-                                            Thickness:{" "}
-                                            <span className="font-medium">
-                                                {p.thickness.value}
-                                                {p.thickness.unit}
-                                            </span>
-                                        </span>
-                                    </div>
                                 </div>
                             </div>
                         ))}

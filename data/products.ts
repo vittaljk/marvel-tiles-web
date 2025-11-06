@@ -12,9 +12,15 @@ export type ProductCategoryId =
 
 export type ProductSize = "2x4" | "6x4" | "3x3" | "4x4";
 
+export const productSizes: ProductSize[] = ["2x4", "6x4", "3x3", "4x4"];
+
 // Only millimeter thicknesses allowed per new requirement
 export type ThicknessUnit = "mm";
+export const thicknessUnit: ThicknessUnit = "mm";
+
 export type ProductThickness = 9 | 12 | 15 | 20;
+
+export const productThicknesses: ProductThickness[] = [9, 12, 15, 20];
 
 export interface Thickness {
     value: ProductThickness; // restricted allowed values in mm
