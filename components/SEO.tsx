@@ -42,15 +42,19 @@ export default function SEO({
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={description} />
             <meta name="twitter:image" content={image} />
+            <meta name="theme-color" content="#1B2A5E" />
+            <meta name="apple-mobile-web-app-status-bar-style" content="#1B2A5E" />
+            <meta name="msapplication-TileColor" content="#1B2A5E" />
 
             {/* Favicon */}
             <link rel="icon" href="/favicon.ico" />
+            <link rel="canonical" href={url} />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "LocalBusiness",
+                        "@type": ["LocalBusiness", "Store", "HomeAndConstructionBusiness", "TileStore"],
                         name: "Marvel Tiles",
                         image: siteConfig.image,
                         telephone: siteConfig.phone,
