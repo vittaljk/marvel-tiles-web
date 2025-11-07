@@ -36,4 +36,8 @@ export const siteConfig = {
   phone: "+91 08884222269",
   email: "marveltiles2024@gmail.com",
   address: "95/4, Bannerghatta Rd, opposite to Euro School, Laxmipura, Bengaluru, Karnataka 560083, India",
+  zip: "560083",
+  city: "Bengaluru",
+  country: "India",
+  state: "Karnataka",
 };

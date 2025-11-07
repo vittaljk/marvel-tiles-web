@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 
 import "@/styles/globals.scss";
+import SEO from "@/components/SEO";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -21,17 +22,20 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <HeroUIProvider navigate={router.push}>
-      <NextThemesProvider
-        attribute="class"
-        defaultTheme="light"
-        value={{
-          light: "light",
-          dark: "light", // TODO: update this once dark mode is implemented
-        }}
-      >
-        <Component {...pageProps} />
-      </NextThemesProvider>
-    </HeroUIProvider>
+    <>
+      <SEO />
+      <HeroUIProvider navigate={router.push}>
+        <NextThemesProvider
+          attribute="class"
+          defaultTheme="light"
+          value={{
+            light: "light",
+            dark: "light", // TODO: update this once dark mode is implemented
+          }}
+        >
+          <Component {...pageProps} />
+        </NextThemesProvider>
+      </HeroUIProvider>
+    </>
   );
 }

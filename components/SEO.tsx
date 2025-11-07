@@ -45,6 +45,29 @@ export default function SEO({
 
             {/* Favicon */}
             <link rel="icon" href="/favicon.ico" />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "LocalBusiness",
+                        name: "Marvel Tiles",
+                        image: siteConfig.image,
+                        telephone: siteConfig.phone,
+                        address: {
+                            "@type": "PostalAddress",
+                            streetAddress: siteConfig.address,
+                            addressLocality: siteConfig.city,
+                            postalCode: siteConfig.zip,
+                            addressCountry: siteConfig.country,
+                            addressRegion: siteConfig.state,
+
+                        },
+                        url: siteConfig.url,
+                    }),
+                }}
+            />
+
         </Head>
     );
 }
