@@ -7,11 +7,13 @@ import { categories, products } from '@/data/products';
 function Gallery() {
     return (
         <Templates.Layout>
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="mt-32 mb-10">
+            <div className="max-w-7xl mx-auto">
+                <div className="mt-32 md:mt-0 mb-10 px-6">
                     <Atoms.ProductNoteCard />
                 </div>
-                <Atoms.ProductInfoCard />
+                <div className="px-6">
+                    <Atoms.ProductInfoCard />
+                </div>
                 {categories.map((category) => {
                     const catProducts = category.id === 'all' ? products : products.filter((p) => p.category === category.id);
                     return (

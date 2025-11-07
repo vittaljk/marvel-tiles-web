@@ -9,9 +9,7 @@ export default function IndexPage() {
         <Atoms.HeroBanner />
       </div>
 
-      <div data-aos="fade-up">
-        <Molecules.Navbar />
-      </div>
+      <Molecules.Navbar />
 
       <div data-aos="fade-up">
         <Molecules.ProductCategoryCarousel />
@@ -20,7 +18,7 @@ export default function IndexPage() {
         <Atoms.ProductNoteCard />
       </div>
       <Molecules.AboutUsSection />
-    
+
       <Molecules.ContactSection />
 
       {/* <div data-aos="fade-up">

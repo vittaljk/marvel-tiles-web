@@ -4,7 +4,7 @@
 
 .contentContainer {
     min-height: calc(100vh - 570px);
-    @apply overflow-x-hidden md:overflow-x-visible;
+    // @apply overflow-x-hidden md:overflow-x-visible;
 }
 
 .item {
